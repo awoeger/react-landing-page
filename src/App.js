@@ -2,13 +2,17 @@
 import './App.css';
 import { css } from '@emotion/react';
 import carrot from './images/carrot.svg';
+import cheese from './images/cheese.svg';
+import eggs from './images/eggs.svg';
 import four from './images/four.svg';
 import lettuce from './images/lettuce.svg';
 import logo from './images/logo.svg';
+import matcha from './images/matcha.svg';
 import one from './images/one.svg';
 import phoneHeader from './images/phoneHeader.png';
 import pineapple from './images/pineapple.svg';
 import tomato from './images/tomato.svg';
+import tomatosauce from './images/tomatosauce.svg';
 import two from './images/two.svg';
 
 // Header Styles
@@ -108,7 +112,7 @@ const wasteFoodSection = css`
   margin-top: 100px;
 
   > div {
-    width: 60%;
+    width: 50%;
   }
 `;
 
@@ -183,6 +187,51 @@ const writingContainer = css`
   }
 `;
 
+// Section 5 - Don't waste food styling Nr. 2
+const eggsBackground = css`
+  box-shadow: rgb(0 0 0 / 15%) 0px 4px 24px;
+  background: linear-gradient(
+    135deg,
+    rgb(246, 245, 242) 0%,
+    rgb(211, 219, 235) 100%
+  );
+  border-radius: 20px;
+  margin: 10px;
+`;
+
+const cheeseBackground = css`
+  box-shadow: rgb(0 0 0 / 15%) 0px 4px 24px;
+  background: linear-gradient(
+    135deg,
+    rgb(255, 239, 184) 0%,
+    rgb(251, 220, 113) 100%
+  );
+  border-radius: 20px;
+  margin: 10px;
+`;
+
+const matchaBackground = css`
+  box-shadow: rgb(0 0 0 / 15%) 0px 4px 24px;
+  background: linear-gradient(
+    135deg,
+    rgb(202, 236, 172) 0%,
+    rgb(131, 208, 197) 100%
+  );
+  border-radius: 20px;
+  margin: 10px;
+`;
+
+const tomatosauceBackground = css`
+  box-shadow: rgb(0 0 0 / 15%) 0px 4px 24px;
+  background: linear-gradient(
+    135deg,
+    rgb(255, 200, 143) 0%,
+    rgb(255, 143, 143) 100%
+  );
+  border-radius: 20px;
+  margin: 10px;
+`;
+
 function App() {
   return (
     <>
@@ -249,16 +298,82 @@ function App() {
           <div css={writingContainer}>
             <h2>Don't let your food go to waste.</h2>
             <p>
-              Kiff tracks your food's state and orders it by priority, so you
-              will know what to eat at a glance.
+              If your food has an expiration date, Kiff will keep it under
+              control so you can eat it before it's too late.
             </p>
           </div>
         </section>
+        {/* Section 3 - Expiration Dates under control */}
+        <section>
+          <div css={writingContainer}>
+            <h2>Expiration dates under control.</h2>
+            <p>
+              Open or stored for too long? Kiff will track the time since you
+              opened, bought, or cooked your food.
+            </p>
+          </div>
+        </section>
+
+        {/* Section 4 - Enjoy your fresh food always */}
+        <section>
+          <div css={writingContainer}>
+            <h2>Enjoy your food always fresh.</h2>
+            <p>
+              Set the desired shelf life for each food and Kiff will remind you
+              to eat it before the time runs out.
+            </p>
+          </div>
+        </section>
+
+        {/* Section 5 - Waste Food Section Nr. 2 */}
+        <section css={wasteFoodSection}>
+          <div css={writingContainer}>
+            <h2>How long has it been open?</h2>
+            <p>
+              Open or stored for too long? Kiff will track the time since you
+              opened, bought, or cooked your food.
+            </p>
+          </div>
+          <div css={foodContainer}>
+            <div>
+              <img css={eggsBackground} src={eggs} alt="Eggs Background" />
+            </div>
+            <div>
+              <img
+                css={cheeseBackground}
+                src={cheese}
+                alt="Cheese Background"
+              />
+            </div>
+            <div>
+              <img
+                css={matchaBackground}
+                src={matcha}
+                alt="Matcha Background"
+              />
+            </div>
+            <div>
+              <img
+                css={tomatosauceBackground}
+                src={tomatosauce}
+                alt="Tomatosauce Background"
+              />
+            </div>
+          </div>
+        </section>
+        {/* Section 6 - Alerts, always in time */}
+        <section>
+          <div css={writingContainer}>
+            <h2>Alerts, always in time.</h2>
+            <p>
+              Enable notifications and Kiff will alert you when your food stops
+              being fresh or is about to expire.
+            </p>
+          </div>
+        </section>
+        {/* Section 7 - Darkmode */}
         <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
+        {/* Section 8 - Save money */}
         <section></section>
       </main>
 
