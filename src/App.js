@@ -1,13 +1,15 @@
 /** @jsxImportSource @emotion/react */
 import './App.css';
 import { css } from '@emotion/react';
-import Emoji from './Emoji';
 import carrot from './images/carrot.svg';
+import four from './images/four.svg';
 import lettuce from './images/lettuce.svg';
 import logo from './images/logo.svg';
+import one from './images/one.svg';
 import phoneHeader from './images/phoneHeader.png';
 import pineapple from './images/pineapple.svg';
 import tomato from './images/tomato.svg';
+import two from './images/two.svg';
 
 // Header Styles
 const headerStyles = css`
@@ -106,13 +108,14 @@ const wasteFoodSection = css`
   margin-top: 100px;
 
   > div {
-    width: 50%;
+    width: 60%;
   }
 `;
 
 const foodContainer = css`
   display: flex;
   flex-wrap: wrap;
+  padding-left: 180px;
 `;
 
 const tomatoBackground = css`
@@ -157,6 +160,27 @@ const pineappleBackground = css`
   );
   border-radius: 20px;
   margin: 10px;
+`;
+
+const writingContainer = css`
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  padding-right: 134px;
+  padding-left: 65px;
+
+  h2 {
+    font-size: 60px;
+    line-height: 1;
+    margin-bottom: 25px;
+  }
+
+  p {
+    color: #36b536;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 0;
+  }
 `;
 
 function App() {
@@ -222,7 +246,7 @@ function App() {
               />
             </div>
           </div>
-          <div>
+          <div css={writingContainer}>
             <h2>Don't let your food go to waste.</h2>
             <p>
               Kiff tracks your food's state and orders it by priority, so you
