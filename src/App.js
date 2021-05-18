@@ -2,8 +2,12 @@
 import './App.css';
 import { css } from '@emotion/react';
 import Emoji from './Emoji';
+import carrot from './images/carrot.svg';
+import lettuce from './images/lettuce.svg';
 import logo from './images/logo.svg';
 import phoneHeader from './images/phoneHeader.png';
+import pineapple from './images/pineapple.svg';
+import tomato from './images/tomato.svg';
 
 // Header Styles
 const headerStyles = css`
@@ -95,6 +99,66 @@ const saveTimeHeading = css`
   font-weight: 500;
 `;
 
+// Section 2 - Don't waste food styling
+const wasteFoodSection = css`
+  padding: 0px 40px;
+  display: flex;
+  margin-top: 100px;
+
+  > div {
+    width: 50%;
+  }
+`;
+
+const foodContainer = css`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+const tomatoBackground = css`
+  box-shadow: rgb(0 0 0 / 15%) 0px 4px 24px;
+  background: linear-gradient(
+    135deg,
+    rgb(255, 200, 143) 0%,
+    rgb(255, 143, 143) 100%
+  );
+  border-radius: 20px;
+  margin: 10px;
+`;
+
+const lettuceBackground = css`
+  box-shadow: rgb(0 0 0 / 15%) 0px 4px 24px;
+  background: linear-gradient(
+    135deg,
+    rgb(202, 236, 172) 0%,
+    rgb(131, 208, 197) 100%
+  );
+  border-radius: 20px;
+  margin: 10px;
+`;
+
+const carrotBackground = css`
+  box-shadow: rgb(0 0 0 / 15%) 0px 4px 24px;
+  background: linear-gradient(
+    135deg,
+    rgb(255, 232, 188) 0%,
+    rgb(255, 156, 84) 100%
+  );
+  border-radius: 20px;
+  margin: 10px;
+`;
+
+const pineappleBackground = css`
+  box-shadow: rgb(0 0 0 / 15%) 0px 4px 24px;
+  background: linear-gradient(
+    135deg,
+    rgb(255, 239, 184) 0%,
+    rgb(251, 220, 113) 100%
+  );
+  border-radius: 20px;
+  margin: 10px;
+`;
+
 function App() {
   return (
     <>
@@ -125,28 +189,37 @@ function App() {
             <br /> fridge or pantry with Kiff.
           </h2>
         </section>
+
         {/* Section Don't waste food */}
-        <section>
-          <div>
+        <section css={wasteFoodSection}>
+          <div css={foodContainer}>
             <div>
-              <Emoji symbol="🥬" />
-              <span>Lettuce</span>
-              <span>Fresh for 3 more days</span>
+              <img
+                css={lettuceBackground}
+                src={lettuce}
+                alt="Lettuce Background"
+              />
             </div>
             <div>
-              <Emoji symbol="🍍" />
-              <span>Pineapple</span>
-              <span>Fresh for 3 more days</span>
+              <img
+                css={pineappleBackground}
+                src={pineapple}
+                alt="Pineapple Background"
+              />
             </div>
             <div>
-              <Emoji symbol="🍅" />
-              <span>Tomatoes</span>
-              <span>Fresh for 8 more days</span>
+              <img
+                css={tomatoBackground}
+                src={tomato}
+                alt="Tomato Background"
+              />
             </div>
             <div>
-              <Emoji symbol="🥕" />
-              <span>Carrots</span>
-              <span>Fresh for 14 more days</span>
+              <img
+                css={carrotBackground}
+                src={carrot}
+                alt="Carrot Background"
+              />
             </div>
           </div>
           <div>
