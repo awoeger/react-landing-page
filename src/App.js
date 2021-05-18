@@ -4,10 +4,13 @@ import { css } from '@emotion/react';
 import carrot from './images/carrot.svg';
 import cheese from './images/cheese.svg';
 import eggs from './images/eggs.svg';
+import expiresIn from './images/expiresIn.svg';
+import expiresToday from './images/expiresToday.svg';
 import four from './images/four.svg';
 import lettuce from './images/lettuce.svg';
 import logo from './images/logo.svg';
 import matcha from './images/matcha.svg';
+import milk from './images/milk.svg';
 import one from './images/one.svg';
 import phoneHeader from './images/phoneHeader.png';
 import pineapple from './images/pineapple.svg';
@@ -122,6 +125,27 @@ const foodContainer = css`
   padding-left: 180px;
 `;
 
+const writingContainer = css`
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  padding-right: 134px;
+  padding-left: 65px;
+
+  h2 {
+    font-size: 60px;
+    line-height: 1;
+    margin-bottom: 25px;
+  }
+
+  p {
+    color: #36b536;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 0;
+  }
+`;
+
 const tomatoBackground = css`
   box-shadow: rgb(0 0 0 / 15%) 0px 4px 24px;
   background: linear-gradient(
@@ -166,12 +190,50 @@ const pineappleBackground = css`
   margin: 10px;
 `;
 
-const writingContainer = css`
+// Section 3 - Expiration dates
+const milkBackground = css`
+  box-shadow: rgb(0 0 0 / 15%) 0px 4px 24px;
+  background: linear-gradient(
+    135deg,
+    rgb(218, 227, 244) 0%,
+    rgb(146, 163, 195) 100%
+  );
+  border-radius: 20px;
+`;
+
+const whiteBackgrounds = css`
+  box-shadow: rgb(0 0 0 / 15%) 0px 4px 24px;
+  border-radius: 20px;
+  background: white;
+`;
+
+const verticalFoodContainer = css`
+  color: white;
+`;
+
+const verticalImage2 = css`
+  margin-left: 20%;
+  margin-top: -15%;
+`;
+
+const verticalImage3 = css`
+  margin-left: 45%;
+  margin-top: -15%;
+`;
+
+// Section 5 - Don't waste food styling Nr. 2
+const foodContainerReversed = css`
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 180px;
+`;
+
+const writingContainerReversed = css`
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-  padding-right: 134px;
-  padding-left: 65px;
+  padding-left: 134px;
+  padding-right: 65px;
 
   h2 {
     font-size: 60px;
@@ -187,7 +249,6 @@ const writingContainer = css`
   }
 `;
 
-// Section 5 - Don't waste food styling Nr. 2
 const eggsBackground = css`
   box-shadow: rgb(0 0 0 / 15%) 0px 4px 24px;
   background: linear-gradient(
@@ -303,14 +364,31 @@ function App() {
             </p>
           </div>
         </section>
+
         {/* Section 3 - Expiration Dates under control */}
-        <section>
-          <div css={writingContainer}>
+        <section css={wasteFoodSection}>
+          <div css={writingContainerReversed}>
             <h2>Expiration dates under control.</h2>
             <p>
               Open or stored for too long? Kiff will track the time since you
               opened, bought, or cooked your food.
             </p>
+          </div>
+
+          <div css={verticalFoodContainer}>
+            <div>
+              <img css={milkBackground} src={milk} alt="Milk Background" />
+            </div>
+            <div css={verticalImage2}>
+              <img css={whiteBackgrounds} src={expiresIn} alt="Expiring Date" />
+            </div>
+            <div css={verticalImage3}>
+              <img
+                css={whiteBackgrounds}
+                src={expiresToday}
+                alt="Expiring Date"
+              />
+            </div>
           </div>
         </section>
 
@@ -327,14 +405,14 @@ function App() {
 
         {/* Section 5 - Waste Food Section Nr. 2 */}
         <section css={wasteFoodSection}>
-          <div css={writingContainer}>
+          <div css={writingContainerReversed}>
             <h2>How long has it been open?</h2>
             <p>
               Open or stored for too long? Kiff will track the time since you
               opened, bought, or cooked your food.
             </p>
           </div>
-          <div css={foodContainer}>
+          <div css={foodContainerReversed}>
             <div>
               <img css={eggsBackground} src={eggs} alt="Eggs Background" />
             </div>
