@@ -444,6 +444,19 @@ const QRCodeImage = css`
 
 // Footer Styling
 
+const footer = css`
+  background: black;
+  width: 100%;
+`;
+
+const topxelImage = css`
+  width: 40%;
+`;
+
+const footerUpperDiv = css`
+  display: flex;
+`;
+
 function App() {
   return (
     <>
@@ -682,10 +695,10 @@ function App() {
         </section>
       </main>
 
-      <footer>
-        <div css="footerUpperDiv">
+      <footer css={footer}>
+        <div css={footerUpperDiv}>
           <div>
-            <img src={topxel} alt="Topxel-Logo" />
+            <img css={topxelImage} src={topxel} alt="Topxel-Logo" />
             <p>Kiff, an app from Topxel.</p>
             <p>© Copyright 2020-2021. All Rights Reserved.</p>
             <span>Terms</span>
@@ -696,8 +709,8 @@ function App() {
             <span>Press kit</span>
             <span>Aobut</span>
             <span>Home</span>
-            <li>Support</li>
-            <li>Download</li>
+            <span>Support</span>
+            <span>Download</span>
           </div>
         </div>
         <div css="footerLowerDiv">
