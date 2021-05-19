@@ -16,11 +16,14 @@ import milk from './images/milk.svg';
 import milkround from './images/milkround.svg';
 import one from './images/one.svg';
 import pasta from './images/pasta.svg';
+import phoneFrontside from './images/phoneFrontside.png';
 import phoneHeader from './images/phoneHeader.png';
 import pineapple from './images/pineapple.svg';
+import QRCode from './images/QRCode.PNG';
 import shelfLife from './images/shelfLife.svg';
 import tomato from './images/tomato.svg';
 import tomatosauce from './images/tomatosauce.svg';
+import topxel from './images/topxel.svg';
 import trackedFor from './images/trackedFor.svg';
 import two from './images/two.svg';
 
@@ -82,11 +85,10 @@ const foodSectionContainer = css`
 `;
 
 const foodSectionSubContainer = css`
-    width: 100%;
-    max-width: 1064px;
-    padding: 0px;
-    margin: 0px auto;
-}
+  width: 100%;
+  max-width: 1064px;
+  padding: 0px;
+  margin: 0px auto;
 `;
 
 // Section 1 - eat fresh styling
@@ -366,30 +368,81 @@ const breadBackground = css`
 // Section 7 Darkmode Styling
 
 const darkmodeSection = css`
+  width: 100%;
+  max-width: 1440px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 180px auto 0 auto;
   background: black;
+  height: 480px;
+  display: flex;
+  align-items: center;
 `;
 
-const darkmode = css`
+const darkmodeWritingContainer = css`
+  width: 100%;
+  max-width: 1090px;
+  padding: 0px;
+  margin: 0px auto;
   display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  padding-left: 134px;
-  padding-right: 65px;
+  justify-content: space-around;
 
   h2 {
-    font-size: 60px;
+    color: white;
+    font-size: 65px;
     line-height: 1;
     margin-bottom: 25px;
-    color: white;
   }
 
   p {
     color: white;
-    font-size: 22px;
+    font-size: 23px;
     font-weight: 500;
     margin-top: 0;
   }
 `;
+
+const darkModeWritingSubContainer = css`
+  width: 50%;
+  padding-right: 130px;
+`;
+
+// Section 8 - QR Code
+const QRCodeSection = css`
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 150px;
+
+  h2 {
+    font-size: 65px;
+    line-height: 1;
+    margin-bottom: 25px;
+  }
+
+  p {
+    color: #36b536;
+    font-size: 23px;
+    font-weight: 500;
+    margin-top: 0;
+  }
+`;
+
+const QrCodeSectionContainer = css`
+  padding: 0 40px;
+`;
+
+const QrCodeSectionSubContainer = css`
+  padding: 0 40px;
+  margin: 0 140px;
+`;
+
+const QRCodeImage = css`
+  width: 15%;
+  margin-top: 20px;
+`;
+
+// Footer Styling
 
 function App() {
   return (
@@ -604,43 +657,60 @@ function App() {
         </div>
         {/* Section 7 - Darkmode */}
         <section css={darkmodeSection}>
-          <div css={darkmode}>
-            <h2>And of course, dark mode.</h2>
-            <p>
-              Perfect for those midnight trips to the fridge for a healthy
-              snack.
-            </p>
+          <div css={darkmodeWritingContainer}>
+            <div css={darkModeWritingSubContainer}>
+              <h2>And of course, dark mode.</h2>
+              <p>
+                Perfect for those midnight trips to the fridge for a healthy
+                snack.
+              </p>
+            </div>
           </div>
-          <div>
-            <img alt="Phone Frontside" />
+          <div css={darkModeWritingSubContainer}>
+            <img src={phoneFrontside} alt="Phone Frontside" />
           </div>
         </section>
         {/* Section 8 - Save money */}
-        <section></section>
+        <section css={QRCodeSection}>
+          <div css={QrCodeSectionContainer}>
+            <div css={QrCodeSectionSubContainer}>
+              <h2>Stop wasting food and start saving money.</h2>
+              <p>Pay once, yours forever.</p>
+              <img css={QRCodeImage} alt="QR-Code" src={QRCode} />
+            </div>
+          </div>
+        </section>
       </main>
 
       <footer>
-        <div>
-          <img alt="Topxel-Logo" />
-          <p></p>
-          <p></p>
-          <a>Terms</a>
-          <a>Privacy</a>
-        </div>
-        <div>
-          <ul>
-            <li>Home</li>
-            <li>Press kit</li>
-            <li>Aobut</li>
+        <div css="footerUpperDiv">
+          <div>
+            <img src={topxel} alt="Topxel-Logo" />
+            <p>Kiff, an app from Topxel.</p>
+            <p>© Copyright 2020-2021. All Rights Reserved.</p>
+            <span>Terms</span>
+            <span>Privacy</span>
+          </div>
+          <div>
+            <span>Home</span>
+            <span>Press kit</span>
+            <span>Aobut</span>
+            <span>Home</span>
             <li>Support</li>
             <li>Download</li>
-          </ul>
+          </div>
         </div>
-        <div>
-          <button>
-            <img alt="Language" />
-            ES
-          </button>
+        <div css="footerLowerDiv">
+          <div>
+            <button>
+              <img alt="Language" />
+              ES
+            </button>
+          </div>
+          <div>
+            <span>Twitter</span>
+            <span>Instagram</span>
+          </div>
         </div>
       </footer>
     </>
