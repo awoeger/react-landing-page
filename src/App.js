@@ -228,8 +228,6 @@ const verticalFoodContainer = css`
   padding-left: 60px;
 `;
 
-const verticalImage1 = css``;
-
 const verticalImage2 = css`
   margin-left: 20%;
   margin-top: -21%;
@@ -249,6 +247,16 @@ const pastaBackground = css`
     rgb(255, 200, 109) 100%
   );
   border-radius: 20px;
+`;
+
+const verticalImageLeft2 = css`
+  margin-left: 23%;
+  margin-top: -23%;
+`;
+
+const verticalImageLeft3 = css`
+  margin-left: 43%;
+  margin-top: -23%;
 `;
 
 // Section 5 - Don't waste food styling Nr. 2
@@ -469,12 +477,7 @@ function App() {
 
               <div css={verticalFoodContainer}>
                 <div>
-                  <img
-                    css={verticalImage1}
-                    css={milkBackground}
-                    src={milk}
-                    alt="Milk Background"
-                  />
+                  <img css={milkBackground} src={milk} alt="Milk Background" />
                 </div>
                 <div css={verticalImage2}>
                   <img
@@ -494,7 +497,7 @@ function App() {
             </section>
 
             {/* Section 4 - Enjoy your fresh food always */}
-            <section wasteFoodSection>
+            <section css={wasteFoodSection}>
               <div>
                 <div>
                   <img
@@ -503,14 +506,14 @@ function App() {
                     alt="Pasta Background"
                   />
                 </div>
-                <div>
+                <div css={verticalImageLeft2}>
                   <img
                     css={whiteBackgrounds}
                     src={shelfLife}
                     alt="Expiring Date"
                   />
                 </div>
-                <div>
+                <div css={verticalImageLeft3}>
                   <img
                     css={whiteBackgrounds}
                     src={trackedFor}
@@ -574,14 +577,14 @@ function App() {
                     alt="Avocado Background"
                   />
                 </div>
-                <div>
+                <div css={verticalImageLeft2}>
                   <img
                     css={milkroundBackground}
                     src={milkround}
                     alt="Milk Background"
                   />
                 </div>
-                <div>
+                <div css={verticalImageLeft3}>
                   <img
                     css={breadBackground}
                     src={bread}
