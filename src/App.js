@@ -32,6 +32,7 @@ import trackedFor from './images/trackedFor.svg';
 import twelve from './images/twelve.svg';
 import twentyeight from './images/twentyeight.svg';
 import two from './images/two.svg';
+import twotomato from './images/twotomato.svg';
 import world from './images/world.svg';
 
 /** @jsxImportSource @emotion/react */
@@ -663,7 +664,7 @@ function App() {
                     src={tomato}
                     alt="Tomato Background"
                   />
-                  <img src={two} alt="two" />
+                  <img src={twotomato} alt="two" />
                 </div>
                 <div
                   data-aos="zoom-in"
@@ -735,7 +736,6 @@ function App() {
                     src={pasta}
                     alt="Pasta Background"
                   />
-                  <img css={pastaNumber} src={one} alt="One" />
                 </div>
                 <div
                   data-aos="fade-up"
@@ -824,7 +824,7 @@ function App() {
                   <img
                     data-aos="zoom-in"
                     data-aos-duration="1500"
-                    src={two}
+                    src={twotomato}
                     alt="Two"
                   />
                 </div>
@@ -853,7 +853,7 @@ function App() {
                 </div>
                 <div
                   data-aos="zoom-in"
-                  data-aos-duration="900"
+                  data-aos-duration="1500"
                   css={verticalImageLeft3}
                 >
                   <img
