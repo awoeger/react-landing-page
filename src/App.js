@@ -81,6 +81,8 @@ const button = css`
   }
 `;
 
+// Generell styles for food containers
+
 const foodSectionContainer = css`
   padding: 0 40px;
 `;
@@ -90,6 +92,20 @@ const foodSectionSubContainer = css`
   max-width: 1064px;
   padding: 0px;
   margin: 0px auto;
+`;
+
+const numberContainer = css`
+  position: relative;
+
+  img:last-of-type {
+    position: absolute;
+    left: 64%;
+    top: 10%;
+    background: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0);
+    border-radius: 100%;
+    width: 26%;
+  }
 `;
 
 // Section 1 - eat fresh styling
@@ -454,6 +470,7 @@ const footer = css`
 const topxelImage = css`
   width: 50%;
   margin-bottom: 20px;
+  fill: red;
 
   :hover {
     fill: rgb(43, 253, 179);
@@ -589,33 +606,37 @@ function App() {
           <div css={foodSectionSubContainer}>
             <section css={wasteFoodSection}>
               <div css={foodContainer}>
-                <div>
+                <div css={numberContainer}>
                   <img
                     css={lettuceBackground}
                     src={lettuce}
                     alt="Lettuce Background"
                   />
+                  <img src={four} alt="four" />
                 </div>
-                <div>
+                <div css={numberContainer}>
                   <img
                     css={pineappleBackground}
                     src={pineapple}
                     alt="Pineapple Background"
                   />
+                  <img src={two} alt="two" />
                 </div>
-                <div>
+                <div css={numberContainer}>
                   <img
                     css={tomatoBackground}
                     src={tomato}
                     alt="Tomato Background"
                   />
+                  <img src={two} alt="two" />
                 </div>
-                <div>
+                <div css={numberContainer}>
                   <img
                     css={carrotBackground}
                     src={carrot}
                     alt="Carrot Background"
                   />
+                  <img src={one} alt="one" />
                 </div>
               </div>
               <div css={writingContainer}>
