@@ -414,6 +414,7 @@ const QRCodeSection = css`
   justify-content: center;
   text-align: center;
   margin-top: 150px;
+  margin-bottom: 120px;
 
   h2 {
     font-size: 65px;
@@ -446,20 +447,24 @@ const QRCodeImage = css`
 // Footer Styling
 
 const footer = css`
-  background: black;
+  background: #141414;
   width: 100%;
 `;
 
 const topxelImage = css`
   width: 50%;
   margin-bottom: 20px;
+
+  :hover {
+    fill: rgb(43, 253, 179);
+  }
 `;
 
 const footerUpperDiv = css`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 0 30px 0;
+  padding: 50px 0 50px 0;
 `;
 
 const footerUpperSubDivLeft = css`
@@ -483,23 +488,18 @@ const footerUpperSubDivLeft = css`
 
   p:last-of-type span {
     color: white;
-    padding-right: 10px;
+    margin-right: 10px;
     margin-top: 20px;
-    text-decoration: underline;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    transition: border-color 0.2s ease 0s;
+
+    :hover {
+      border-color: white;
+    }
   }
 `;
 
 const footerUpperSubDivRight = css`
-  button {
-    display: flex;
-    align-items: center;
-    border-radius: 4px;
-  }
-
-  button img {
-    padding: 2px;
-  }
-
   span {
     color: white;
     font-size: 28px;
@@ -519,11 +519,37 @@ const footerLowerDiv = css`
   align-items: center;
   padding: 0 0 20px 0;
 
+  button {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    border: none;
+    background: #262626;
+    color: #7e7e7e;
+    padding-right: 10px;
+  }
+
+  button img {
+    padding: 7px;
+    color: #7e7e7e;
+  }
+
+  button:hover {
+    background: white;
+    color: black;
+  }
+
   span {
-    color: white;
+    color: #6f6f6f;
     margin-left: 40px;
-    font-size: 18px;
+    font-size: 20px;
     padding: 8px;
+    border-radius: 8px;
+    font-weight: 500;
+  }
+
+  span:hover {
+    color: white;
   }
 `;
 
