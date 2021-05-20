@@ -277,16 +277,6 @@ const pastaBackground = css`
   border-radius: 20px;
 `;
 
-const pastaNumber = css`
-  position: absolute;
-  left: 23%;
-  top: 246%;
-  background: rgba(255, 255, 255, 0.5);
-  color: rgba(255, 255, 255, 0);
-  border-radius: 100%;
-  width: 4%;
-`;
-
 const verticalImageLeft2 = css`
   margin-left: 23%;
   margin-top: -23%;
