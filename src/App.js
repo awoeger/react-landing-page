@@ -443,7 +443,7 @@ const darkModeWritingSubContainer = css`
 `;
 
 // Section 8 - QR Code
-const QRCodeSection = css`
+const qrCodeSection = css`
   display: flex;
   justify-content: center;
   text-align: center;
@@ -464,16 +464,16 @@ const QRCodeSection = css`
   }
 `;
 
-const QrCodeSectionContainer = css`
+const qrCodeSectionContainer = css`
   padding: 0 40px;
 `;
 
-const QrCodeSectionSubContainer = css`
+const qrCodeSectionSubContainer = css`
   padding: 0 40px;
   margin: 0 140px;
 `;
 
-const QRCodeImage = css`
+const qrCodeImage = css`
   width: 15%;
   margin-top: 20px;
 `;
@@ -886,27 +886,27 @@ function App() {
           </div>
           <div css={darkModeWritingSubContainer}>
             <img
-              data-aos={'fade-up'}
-              // data-aos-duration={'2000'}
+              data-aos="fade-up"
+              data-aos-duration="1500"
               src={phoneFrontside}
               alt="Phone Frontside"
             />
           </div>
         </section>
         {/* Section 8 - Save money */}
-        <section css={QRCodeSection}>
-          <div css={QrCodeSectionContainer}>
-            <div css={QrCodeSectionSubContainer}>
+        <section css={qrCodeSection}>
+          <div css={qrCodeSectionContainer}>
+            <div css={qrCodeSectionSubContainer}>
               <h2>Stop wasting food and start saving money.</h2>
               <p>Pay once, yours forever.</p>
-              <img css={QRCodeImage} alt="QR-Code" src={QRCode} />
+              <img css={qrCodeImage} alt="QR-Code" src={QRCode} />
             </div>
           </div>
         </section>
       </main>
       {/* Footer */}
       <footer css={footer}>
-        <div css={QrCodeSectionContainer}>
+        <div css={qrCodeSectionContainer}>
           <div css={footerUpperDiv}>
             <div css={footerUpperSubDivLeft}>
               <img css={topxelImage} src={topxel} alt="Topxel-Logo" />
