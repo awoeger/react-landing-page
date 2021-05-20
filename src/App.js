@@ -26,6 +26,7 @@ import tomatosauce from './images/tomatosauce.svg';
 import topxel from './images/topxel.svg';
 import trackedFor from './images/trackedFor.svg';
 import two from './images/two.svg';
+import world from './images/world.svg';
 
 // Header Styles
 const headerStyles = css`
@@ -450,11 +451,80 @@ const footer = css`
 `;
 
 const topxelImage = css`
-  width: 40%;
+  width: 50%;
+  margin-bottom: 20px;
 `;
 
 const footerUpperDiv = css`
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0 30px 0;
+`;
+
+const footerUpperSubDivLeft = css`
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: space-between;
+  flex-direction: column;
+
+  p {
+    color: white;
+    font-size: 17px;
+    color: #767676;
+    margin: 0px;
+    font-weight: 500;
+  }
+
+  p:last-of-type {
+    margin-top: 30px;
+  }
+
+  p:last-of-type span {
+    color: white;
+    padding-right: 10px;
+    margin-top: 20px;
+    text-decoration: underline;
+  }
+`;
+
+const footerUpperSubDivRight = css`
+  button {
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+  }
+
+  button img {
+    padding: 2px;
+  }
+
+  span {
+    color: white;
+    font-size: 28px;
+    margin-left: 32px;
+    padding: 8px;
+    border-radius: 6px;
+
+    :hover {
+      background: rgba(188, 188, 188, 0.3);
+    }
+  }
+`;
+
+const footerLowerDiv = css`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 20px 0;
+
+  span {
+    color: white;
+    margin-left: 40px;
+    font-size: 18px;
+    padding: 8px;
+  }
 `;
 
 function App() {
@@ -694,35 +764,39 @@ function App() {
           </div>
         </section>
       </main>
-
+      {/* Footer */}
       <footer css={footer}>
-        <div css={footerUpperDiv}>
-          <div>
-            <img css={topxelImage} src={topxel} alt="Topxel-Logo" />
-            <p>Kiff, an app from Topxel.</p>
-            <p>© Copyright 2020-2021. All Rights Reserved.</p>
-            <span>Terms</span>
-            <span>Privacy</span>
+        <div css={QrCodeSectionContainer}>
+          <div css={footerUpperDiv}>
+            <div css={footerUpperSubDivLeft}>
+              <img css={topxelImage} src={topxel} alt="Topxel-Logo" />
+              <p>Kiff, an app from Topxel.</p>
+              <p>© Copyright 2020-2021. All Rights Reserved.</p>
+              <p>
+                <span>Terms</span>
+                <span>Privacy</span>
+              </p>
+            </div>
+            <div css={footerUpperSubDivRight}>
+              <span>Home</span>
+              <span>Press kit</span>
+              <span>About</span>
+              <span>Home</span>
+              <span>Support</span>
+              <span>Download</span>
+            </div>
           </div>
-          <div>
-            <span>Home</span>
-            <span>Press kit</span>
-            <span>Aobut</span>
-            <span>Home</span>
-            <span>Support</span>
-            <span>Download</span>
-          </div>
-        </div>
-        <div css="footerLowerDiv">
-          <div>
-            <button>
-              <img alt="Language" />
-              ES
-            </button>
-          </div>
-          <div>
-            <span>Twitter</span>
-            <span>Instagram</span>
+          <div css={footerLowerDiv}>
+            <div>
+              <button>
+                <img src={world} alt="Language" />
+                ES
+              </button>
+            </div>
+            <div>
+              <span>Twitter</span>
+              <span>Instagram</span>
+            </div>
           </div>
         </div>
       </footer>
