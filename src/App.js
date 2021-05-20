@@ -14,6 +14,7 @@ import logo from './images/logo.svg';
 import matcha from './images/matcha.svg';
 import milk from './images/milk.svg';
 import milkround from './images/milkround.svg';
+import nine from './images/nine.svg';
 import one from './images/one.svg';
 import pasta from './images/pasta.svg';
 import phoneFrontside from './images/phoneFrontside.png';
@@ -25,6 +26,8 @@ import tomato from './images/tomato.svg';
 import tomatosauce from './images/tomatosauce.svg';
 import topxel from './images/topxel.svg';
 import trackedFor from './images/trackedFor.svg';
+import twelve from './images/twelve.svg';
+import twentyeight from './images/twentyeight.svg';
 import two from './images/two.svg';
 import world from './images/world.svg';
 
@@ -266,6 +269,16 @@ const pastaBackground = css`
     rgb(255, 200, 109) 100%
   );
   border-radius: 20px;
+`;
+
+const pastaNumber = css`
+  position: absolute;
+  left: 23%;
+  top: 246%;
+  background: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0);
+  border-radius: 100%;
+  width: 4%;
 `;
 
 const verticalImageLeft2 = css`
@@ -688,6 +701,7 @@ function App() {
                     src={pasta}
                     alt="Pasta Background"
                   />
+                  <img css={pastaNumber} src={one} alt="One" />
                 </div>
                 <div css={verticalImageLeft2}>
                   <img
@@ -724,29 +738,33 @@ function App() {
                 </p>
               </div>
               <div css={foodContainerReversed}>
-                <div>
+                <div css={numberContainer}>
                   <img css={eggsBackground} src={eggs} alt="Eggs Background" />
+                  <img src={twentyeight} alt="Twentyeight" />
                 </div>
-                <div>
+                <div css={numberContainer}>
                   <img
                     css={cheeseBackground}
                     src={cheese}
                     alt="Cheese Background"
                   />
+                  <img src={twelve} alt="Twelve" />
                 </div>
-                <div>
+                <div css={numberContainer}>
                   <img
                     css={matchaBackground}
                     src={matcha}
                     alt="Matcha Background"
                   />
+                  <img src={nine} alt="Nine" />
                 </div>
-                <div>
+                <div css={numberContainer}>
                   <img
                     css={tomatosauceBackground}
                     src={tomatosauce}
                     alt="Tomatosauce Background"
                   />
+                  <img src={two} alt="Two" />
                 </div>
               </div>
             </section>
