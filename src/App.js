@@ -1,6 +1,9 @@
-/** @jsxImportSource @emotion/react */
 import './App.css';
+import 'aos/dist/aos.css';
 import { css } from '@emotion/react';
+import AOS from 'aos';
+import React, { useEffect } from 'react';
+// Import Images
 import avocado from './images/avocado.svg';
 import bread from './images/bread.svg';
 import carrot from './images/carrot.svg';
@@ -30,6 +33,8 @@ import twelve from './images/twelve.svg';
 import twentyeight from './images/twentyeight.svg';
 import two from './images/two.svg';
 import world from './images/world.svg';
+
+/** @jsxImportSource @emotion/react */
 
 // Header Styles
 const headerStyles = css`
@@ -584,6 +589,11 @@ const footerLowerDiv = css`
 `;
 
 function App() {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
     <>
       <header css={headerStyles}>
@@ -619,7 +629,11 @@ function App() {
           <div css={foodSectionSubContainer}>
             <section css={wasteFoodSection}>
               <div css={foodContainer}>
-                <div css={numberContainer}>
+                <div
+                  data-aos="zoom-in"
+                  data-aos-duration="900"
+                  css={numberContainer}
+                >
                   <img
                     css={lettuceBackground}
                     src={lettuce}
@@ -627,7 +641,11 @@ function App() {
                   />
                   <img src={four} alt="four" />
                 </div>
-                <div css={numberContainer}>
+                <div
+                  data-aos="zoom-in"
+                  data-aos-duration="1300"
+                  css={numberContainer}
+                >
                   <img
                     css={pineappleBackground}
                     src={pineapple}
@@ -635,7 +653,11 @@ function App() {
                   />
                   <img src={two} alt="two" />
                 </div>
-                <div css={numberContainer}>
+                <div
+                  data-aos="zoom-in"
+                  data-aos-duration="1600"
+                  css={numberContainer}
+                >
                   <img
                     css={tomatoBackground}
                     src={tomato}
@@ -643,7 +665,11 @@ function App() {
                   />
                   <img src={two} alt="two" />
                 </div>
-                <div css={numberContainer}>
+                <div
+                  data-aos="zoom-in"
+                  data-aos-duration="1900"
+                  css={numberContainer}
+                >
                   <img
                     css={carrotBackground}
                     src={carrot}
@@ -675,14 +701,22 @@ function App() {
                 <div>
                   <img css={milkBackground} src={milk} alt="Milk Background" />
                 </div>
-                <div css={verticalImage2}>
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="1500"
+                  css={verticalImage2}
+                >
                   <img
                     css={whiteBackgrounds}
                     src={expiresIn}
                     alt="Expiring Date"
                   />
                 </div>
-                <div css={verticalImage3}>
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="1500"
+                  css={verticalImage3}
+                >
                   <img
                     css={whiteBackgrounds}
                     src={expiresToday}
@@ -703,14 +737,22 @@ function App() {
                   />
                   <img css={pastaNumber} src={one} alt="One" />
                 </div>
-                <div css={verticalImageLeft2}>
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="1500"
+                  css={verticalImageLeft2}
+                >
                   <img
                     css={whiteBackgrounds}
                     src={shelfLife}
                     alt="Expiring Date"
                   />
                 </div>
-                <div css={verticalImageLeft3}>
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="1500"
+                  css={verticalImageLeft3}
+                >
                   <img
                     css={whiteBackgrounds}
                     src={trackedFor}
@@ -740,7 +782,12 @@ function App() {
               <div css={foodContainerReversed}>
                 <div css={numberContainer}>
                   <img css={eggsBackground} src={eggs} alt="Eggs Background" />
-                  <img src={twentyeight} alt="Twentyeight" />
+                  <img
+                    data-aos="zoom-in"
+                    data-aos-duration="900"
+                    src={twentyeight}
+                    alt="Twentyeight"
+                  />
                 </div>
                 <div css={numberContainer}>
                   <img
@@ -748,7 +795,12 @@ function App() {
                     src={cheese}
                     alt="Cheese Background"
                   />
-                  <img src={twelve} alt="Twelve" />
+                  <img
+                    data-aos="zoom-in"
+                    data-aos-duration="1100"
+                    src={twelve}
+                    alt="Twelve"
+                  />
                 </div>
                 <div css={numberContainer}>
                   <img
@@ -756,7 +808,12 @@ function App() {
                     src={matcha}
                     alt="Matcha Background"
                   />
-                  <img src={nine} alt="Nine" />
+                  <img
+                    data-aos="zoom-in"
+                    data-aos-duration="1300"
+                    src={nine}
+                    alt="Nine"
+                  />
                 </div>
                 <div css={numberContainer}>
                   <img
@@ -764,28 +821,41 @@ function App() {
                     src={tomatosauce}
                     alt="Tomatosauce Background"
                   />
-                  <img src={two} alt="Two" />
+                  <img
+                    data-aos="zoom-in"
+                    data-aos-duration="1500"
+                    src={two}
+                    alt="Two"
+                  />
                 </div>
               </div>
             </section>
             {/* Section 6 - Alerts, always in time */}
             <section css={wasteFoodSection}>
               <div>
-                <div>
+                <div data-aos="zoom-in" data-aos-duration="1500">
                   <img
                     css={avocadoBackground}
                     src={avocado}
                     alt="Avocado Background"
                   />
                 </div>
-                <div css={verticalImageLeft2}>
+                <div
+                  data-aos="zoom-in"
+                  data-aos-duration="1500"
+                  css={verticalImageLeft2}
+                >
                   <img
                     css={milkroundBackground}
                     src={milkround}
                     alt="Milk Background"
                   />
                 </div>
-                <div css={verticalImageLeft3}>
+                <div
+                  data-aos="zoom-in"
+                  data-aos-duration="900"
+                  css={verticalImageLeft3}
+                >
                   <img
                     css={breadBackground}
                     src={bread}
@@ -815,7 +885,12 @@ function App() {
             </div>
           </div>
           <div css={darkModeWritingSubContainer}>
-            <img src={phoneFrontside} alt="Phone Frontside" />
+            <img
+              data-aos={'fade-up'}
+              // data-aos-duration={'2000'}
+              src={phoneFrontside}
+              alt="Phone Frontside"
+            />
           </div>
         </section>
         {/* Section 8 - Save money */}
